@@ -3,8 +3,13 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
 
 ### Preperation:
 1. Install Lightsail Instance
-1. Install git
-1. Clone this repository
+2. Install git
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+```
+3. Clone this repository
 ```
 git clone https://github.com/nixitec/lungfish.git
 ```
