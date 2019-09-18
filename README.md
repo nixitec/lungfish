@@ -20,5 +20,4 @@ chmod +x lungfi.sh
 ```
 ### lungfi.sh will:
 1. Create a new user
-1. Delete the default ubuntu user
-1. 
+1. Install Cloud9
