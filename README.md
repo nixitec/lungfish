@@ -14,7 +14,10 @@ sudo apt-get install git
 git clone https://github.com/nixitec/lungfish.git
 ```
 4. Run ./lungfi.sh
-
+```
+chmod +x lungfi.sh
+./lungfi.sh
+```
 ### lungfi.sh will:
 1. Create a new user
 1. Delete the default ubuntu user
