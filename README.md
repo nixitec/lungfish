@@ -6,9 +6,9 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
 1. Install git
 1. Clone this repository
 ```
-    git clone https://github.com/nixitec/lungfish.git
+git clone https://github.com/nixitec/lungfish.git
 ```
-1. Run ./lungfi.sh
+4. Run ./lungfi.sh
 
 ### lungfi.sh will:
 1. Create a new user
