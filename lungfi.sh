@@ -30,7 +30,7 @@ echo -e $COL_GREEN"Installing Python ..."$COL_RESET
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
 echo -e $COL_GREEN"Creating Python venv ..."$COL_RESET
-sudo apt-get install python3-venv
+sudo apt install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
 pwd
