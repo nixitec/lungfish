@@ -57,3 +57,17 @@ echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
 echo -e "Enter to continue: "
 read ok
 sudo -H ./$MYPROJECT_ENV/bin/pip install gunicorn flask
+
+> myproject.py
+echo "
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "<h1 style='color:blue'>Hello There!</h1>"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
+" > myproject.py
+
