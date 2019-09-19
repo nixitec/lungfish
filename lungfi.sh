@@ -12,6 +12,7 @@ echo "User $name added !"
 echo -e $COL_BLUE"Important Message: "$COL_RESET"This is a message"
 
 sudo apt install nginx
+sudo ufw enable
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
