@@ -50,7 +50,7 @@ source ./$MYPROJECT_ENV/bin/activate
 echo -e $COL_GREEN"Installing Wheel ..."$COL_RESET
 echo -e "Enter to continue: "
 read ok
-pip install wheel
+sudo -H pip install wheel
 
 echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
 echo -e "Enter to continue: "
