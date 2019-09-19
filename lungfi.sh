@@ -15,12 +15,12 @@ echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 # echo "User $name added !"
 
 echo -e $COL_GREEN"Installing NGINX ..."$COL_RESET
-echo -e "OK to Continue ?: "
+echo -e "Enter to continue: "
 read ok
 sudo apt install nginx
 
 echo -e $COL_GREEN"Enabling Firewall ..."$COL_RESET
-echo -e "OK to Continue ?: "
+echo -e "Enter to continue: "
 read ok
 sudo ufw enable
 sudo ufw app list
@@ -30,16 +30,29 @@ sudo ufw allow 'OpenSSH'
 # systemctl status nginx
 
 echo -e $COL_GREEN"Installing Python ..."$COL_RESET
-echo -e "OK to Continue ?: "
+echo -e "Enter to continue: "
 read ok
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
-echo -e $COL_GREEN"Creating Python venv ..."$COL_RESET
+echo -e $COL_GREEN"Installing Python venv ..."$COL_RESET
+echo -e "Enter to continue: "
+read ok
 sudo apt install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
 pwd
+echo -e $COL_GREEN"Activating Python venv ..."$COL_RESET
+echo -e "Enter to continue: "
+read ok
 sudo python3.6 -m venv $MYPROJECT_ENV
-source ~/$MYPROJECT/$MYPROJECT_ENV/bin/activate
+source ./$MYPROJECT_ENV/bin/activate
+
+echo -e $COL_GREEN"Installing Wheel ..."$COL_RESET
+echo -e "Enter to continue: "
+read ok
 sudo pip install wheel
+
+echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
+echo -e "Enter to continue: "
+read ok
 sudo pip install gunicorn flask
