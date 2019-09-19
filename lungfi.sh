@@ -59,7 +59,7 @@ read ok
 sudo -H ./$MYPROJECT_ENV/bin/pip install gunicorn flask
 
 > myproject.py
-echo "
+echo 
 from flask import Flask
 app = Flask(__name__)
 
@@ -69,5 +69,5 @@ def hello():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
-" > myproject.py
+> myproject.py
 
