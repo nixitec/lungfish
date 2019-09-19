@@ -34,7 +34,7 @@ sudo apt-get install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
 pwd
-python3.6 -m venv $MYPROJECT_ENV
+sudo python3.6 -m venv $MYPROJECT_ENV
 source $MYPROJECT_ENV/bin/activate
 sudo pip install wheel
 sudo pip install gunicorn flask
