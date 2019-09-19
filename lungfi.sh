@@ -3,7 +3,7 @@ COL_GREEN="\x1b[32;01m"
 COL_RESET="\x1b[39;49;00m"
 
 MYPROJECT="nixography"
-MYPROJECT_ENV="nixographyenv"
+MYPROJECT_ENV="nix_env"
 
 echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 
@@ -41,6 +41,7 @@ sudo apt install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
 pwd
+
 echo -e $COL_GREEN"Activating Python venv ..."$COL_RESET
 echo -e "Enter to continue: "
 read ok
