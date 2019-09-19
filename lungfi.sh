@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 COL_GREEN="\x1b[32;01m"
 COL_RESET="\x1b[39;49;00m"
 
