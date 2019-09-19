@@ -5,4 +5,6 @@ git clone https://github.com/nixitec/lungfish.git
 cd lungfish
 chmod +x lungfi.sh
 chmod +x reset.sh
-sudo bash ./lungfi.sh
+cp ./reset.sh ..
+cd ..
+sudo bash +x ./lungfi.sh
