@@ -29,7 +29,7 @@ sudo ufw allow 'OpenSSH'
 # sudo ufw status
 # systemctl status nginx
 
-echo -e $COL_GREEN"Installing Python ..."$COL_RESET
+echo -e $COL_GREEN"Installing Python3 dependencies..."$COL_RESET
 echo -e "Enter to continue: "
 read ok
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
