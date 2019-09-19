@@ -17,7 +17,7 @@ git clone https://github.com/nixitec/lungfish.git
 ```
 cd lungfish
 chmod +x lungfi.sh
-./lungfi.sh
+sudo -x ./lungfi.sh
 ```
 5. Remove lungfish
 ```
