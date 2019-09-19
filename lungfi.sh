@@ -50,9 +50,9 @@ source ./$MYPROJECT_ENV/bin/activate
 echo -e $COL_GREEN"Installing Wheel ..."$COL_RESET
 echo -e "Enter to continue: "
 read ok
-sudo ./$MYPROJECT_ENV/bin/pip install wheel
+sudo -H ./$MYPROJECT_ENV/bin/pip install wheel
 
 echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
 echo -e "Enter to continue: "
 read ok
-sudo ./$MYPROJECT_ENV/bin/pip install gunicorn flask
+sudo -H ./$MYPROJECT_ENV/bin/pip install gunicorn flask
