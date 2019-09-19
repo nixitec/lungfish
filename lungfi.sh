@@ -20,8 +20,8 @@ sudo ufw enable
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'OpenSSH'
-sudo ufw status
-systemctl status nginx
+# sudo ufw status
+# systemctl status nginx
 
 echo -e $COL_GREEN"Installing Python ..."$COL_RESET
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
