@@ -19,6 +19,14 @@ cd lungfish
 chmod +x lungfi.sh
 ./lungfi.sh
 ```
+5. Remove lungfish
+```
+cd ..
+sudo rm -rfv lungfish
+```
+
+
+
 ### lungfi.sh will:
 1. Create a new user
 1. Install Cloud9
