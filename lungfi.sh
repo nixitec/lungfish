@@ -21,7 +21,7 @@ sudo apt install nginx
 
 echo -e $COL_GREEN"Enabling Firewall ..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+#read ok
 sudo ufw enable
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
@@ -31,12 +31,12 @@ sudo ufw allow 'OpenSSH'
 
 echo -e $COL_GREEN"Installing Python3 dependencies..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+#read ok
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
 echo -e $COL_GREEN"Installing Python venv ..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+#read ok
 sudo apt install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
@@ -44,13 +44,13 @@ pwd
 
 echo -e $COL_GREEN"Activating Python venv ..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+#read ok
 sudo python3.6 -m venv $MYPROJECT_ENV
 source ./$MYPROJECT_ENV/bin/activate
 
 echo -e $COL_GREEN"Installing Wheel ..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+#read ok
 sudo -H ./$MYPROJECT_ENV/bin/pip install wheel
 
 echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
