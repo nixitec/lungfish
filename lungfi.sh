@@ -15,9 +15,13 @@ echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 # echo "User $name added !"
 
 echo -e $COL_GREEN"Installing NGINX ..."$COL_RESET
+echo -e "OK to Continue ?: "
+read ok
 sudo apt install nginx
 
 echo -e $COL_GREEN"Enabling Firewall ..."$COL_RESET
+echo -e "OK to Continue ?: "
+read ok
 sudo ufw enable
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
@@ -26,9 +30,10 @@ sudo ufw allow 'OpenSSH'
 # systemctl status nginx
 
 echo -e $COL_GREEN"Installing Python ..."$COL_RESET
+echo -e "OK to Continue ?: "
+read ok
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
-# set -x
 echo -e $COL_GREEN"Creating Python venv ..."$COL_RESET
 sudo apt install python3-venv
 mkdir ~/$MYPROJECT
