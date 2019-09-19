@@ -1,4 +1,4 @@
-cd ~/home
+cd ~
 rm -rf lungfish
 rm -rf nixography
 git clone https://github.com/nixitec/lungfish.git
