@@ -1,9 +1,12 @@
 #!/bin/bash
+
 COL_GREEN="\x1b[32;01m"
 COL_RESET="\x1b[39;49;00m"
 
 MYPROJECT="nixography"
 MYPROJECT_ENV="nixographyenv"
+
+echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 
 # Create a new user
 # echo -e "Please enter the new user name: "
@@ -27,9 +30,10 @@ echo -e $COL_GREEN"Installing Python ..."$COL_RESET
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
 echo -e $COL_GREEN"Creating Python venv ..."$COL_RESET
-sudo apt install python3-venv
+sudo apt-get install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
+pwd
 python3.6 -m venv $MYPROJECT_ENV
 source $MYPROJECT_ENV/bin/activate
 pip install wheel
