@@ -10,3 +10,10 @@ usermod -aG sudo $name          # Add the user to the sudo group
 echo "User $name added !"
 
 echo -e $COL_BLUE"Important Message: "$COL_RESET"This is a message"
+
+sudo apt install nginx
+sudo ufw app list
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
+systemctl status nginx
+
