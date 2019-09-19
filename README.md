@@ -15,6 +15,7 @@ git clone https://github.com/nixitec/lungfish.git
 ```
 4. Run ./lungfi.sh
 ```
+cd lungfish
 chmod +x lungfi.sh
 ./lungfi.sh
 ```
