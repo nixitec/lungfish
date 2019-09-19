@@ -36,5 +36,5 @@ cd ~/$MYPROJECT
 pwd
 python3.6 -m venv $MYPROJECT_ENV
 source $MYPROJECT_ENV/bin/activate
-pip install wheel
-pip install gunicorn flask
+sudo pip install wheel
+sudo pip install gunicorn flask
