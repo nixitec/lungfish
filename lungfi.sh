@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 COL_GREEN="\x1b[32;01m"
 COL_RESET="\x1b[39;49;00m"
 
@@ -29,7 +29,7 @@ sudo ufw allow 'OpenSSH'
 echo -e $COL_GREEN"Installing Python ..."$COL_RESET
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
-set -x
+# set -x
 echo -e $COL_GREEN"Creating Python venv ..."$COL_RESET
 sudo apt install python3-venv
 mkdir ~/$MYPROJECT
