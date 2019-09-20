@@ -89,7 +89,7 @@ User=$USERNAME
 Group=www-data
 WorkingDirectory=/home/$USERNAME/$MYPROJECT
 Environment="PATH=/home/$USERNAME/$MYPROJECT/$MYPROJECT_ENV/bin"
-ExecStart=/home/$USERNAME/$MYPROJECT/$MYPROJECT_ENV/bin/gunicorn --workers 3 --bind unix:$MYPROJECT.sock -m 007 wsgi:app
+ExecStart=/home/$USERNAME/$MYPROJECT/$MYPROJECT_ENV/bin/gunicorn --workers 3 --bind unix:$MYPROJECT.sock -m 777 wsgi:app
 
 [Install]
 WantedBy=multi-user.target
