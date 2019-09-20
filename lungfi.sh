@@ -63,7 +63,7 @@ sudo ufw allow 5000
 
 echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET
 > myproject.py
-echo -e '
+echo -e "
 from flask import Flask
 app = Flask(__name__)
 
@@ -73,7 +73,7 @@ def hello():
 
 if __name__ == \"__main__\":
     app.run(host=\'0.0.0.0\')
-' > myproject.py
+" > myproject.py
 
 echo -e $COL_GREEN"Creating wsgi.py ..."$COL_RESET
 > wsgi.py
