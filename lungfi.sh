@@ -61,7 +61,7 @@ sudo -H ./$MYPROJECT_ENV/bin/pip install gunicorn flask
 echo -e $COL_GREEN"Opening Port 5000 ..."$COL_RESET
 sudo ufw allow 5000
 
-echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET
+echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET  #Note: Use "..." and escape \ the " and not the '
 > myproject.py
 echo -e "
 from flask import Flask
@@ -69,20 +69,20 @@ app = Flask(__name__)
 
 @app.route(\"/\")
 def hello():
-    return \"<h1 style=\'color:blue\'>Hello There!</h1>\"
+    return \"<h1 style='color:blue'>Hello There!</h1>\"
 
 if __name__ == \"__main__\":
-    app.run(host=\'0.0.0.0\')
+    app.run(host='0.0.0.0')
 " > myproject.py
 
 echo -e $COL_GREEN"Creating wsgi.py ..."$COL_RESET
 > wsgi.py
-echo -e '
+echo -e "
 from myproject import app
 
 if __name__ == \"__main__\":
     app.run()
-' > wsgi.py
+" > wsgi.py
 
 echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
 gunicorn --bind 0.0.0.0:5000 wsgi:app
