@@ -63,24 +63,24 @@ sudo ufw allow 5000
 
 echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET
 > myproject.py
-echo '
+echo -e 
 from flask import Flask
 app = Flask(__name__)
 
-@app.route("/")
+@app.route(\"/\")
 def hello():
-    return "<h1 style="color:blue">Hello There!</h1>"
+    return \"<h1 style=\'color:blue\'>Hello There!</h1>\"
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+if __name__ == \"__main__\":
+    app.run(host=\'0.0.0.0\')
 ' > myproject.py
 
 echo -e $COL_GREEN"Creating wsgi.py ..."$COL_RESET
 > wsgi.py
-echo '
+echo -e
 from myproject import app
 
-if __name__ == "__main__":
+if __name__ == \"__main__\":
     app.run()
 ' > wsgi.py
 
