@@ -16,7 +16,7 @@ echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 
 echo -e $COL_GREEN"Installing NGINX ..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+# read ok
 sudo apt install nginx
 
 echo -e $COL_GREEN"Enabling Firewall ..."$COL_RESET
@@ -55,7 +55,7 @@ sudo -H ./$MYPROJECT_ENV/bin/pip install wheel
 
 echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
 echo -e "Enter to continue: "
-read ok
+# read ok
 sudo -H ./$MYPROJECT_ENV/bin/pip install gunicorn flask
 
 echo -e $COL_GREEN"Opening Port 5000 ..."$COL_RESET
@@ -63,7 +63,7 @@ sudo ufw allow 5000
 
 echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET
 > myproject.py
-echo -e 
+echo -e '
 from flask import Flask
 app = Flask(__name__)
 
@@ -77,7 +77,7 @@ if __name__ == \"__main__\":
 
 echo -e $COL_GREEN"Creating wsgi.py ..."$COL_RESET
 > wsgi.py
-echo -e
+echo -e '
 from myproject import app
 
 if __name__ == \"__main__\":
