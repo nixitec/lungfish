@@ -16,13 +16,9 @@ echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 # echo "User $name added !"
 
 echo -e $COL_GREEN"Installing NGINX ..."$COL_RESET
-echo -e "Enter to continue: "
-# read ok
 sudo apt install nginx
 
 echo -e $COL_GREEN"Enabling Firewall ..."$COL_RESET
-echo -e "Enter to continue: "
-#read ok
 sudo ufw enable
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
@@ -31,38 +27,28 @@ sudo ufw allow 'OpenSSH'
 # systemctl status nginx
 
 echo -e $COL_GREEN"Installing Python3 dependencies..."$COL_RESET
-echo -e "Enter to continue: "
-#read ok
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
 echo -e $COL_GREEN"Installing Python venv ..."$COL_RESET
-echo -e "Enter to continue: "
-#read ok
 sudo apt install python3-venv
 mkdir ~/$MYPROJECT
 cd ~/$MYPROJECT
 pwd
 
 echo -e $COL_GREEN"Activating Python venv ..."$COL_RESET
-echo -e "Enter to continue: "
-#read ok
 sudo python3.6 -m venv $MYPROJECT_ENV
 source ./$MYPROJECT_ENV/bin/activate
 
 echo -e $COL_GREEN"Installing Wheel ..."$COL_RESET
-echo -e "Enter to continue: "
-#read ok
 sudo -H ./$MYPROJECT_ENV/bin/pip install wheel
 
 echo -e $COL_GREEN"Installing Gunicorn and Flask ..."$COL_RESET
-echo -e "Enter to continue: "
-# read ok
 sudo -H ./$MYPROJECT_ENV/bin/pip install gunicorn flask
 
 echo -e $COL_GREEN"Opening Port 5000 ..."$COL_RESET
 sudo ufw allow 5000
 
-echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET  #Note: Use "..." and escape \ the " and not the '
+echo -e $COL_GREEN"Creating $MYPROJECT.py ..."$COL_RESET  #Note: Use "..." and escape \ the " and not the '
 > $MYPROJECT.py
 echo -e "
 from flask import Flask
@@ -79,7 +65,7 @@ if __name__ == \"__main__\":
 echo -e $COL_GREEN"Creating wsgi.py ..."$COL_RESET
 > wsgi.py
 echo -e "
-from myproject import app
+from $MYPROJECT import app
 
 if __name__ == \"__main__\":
     app.run()
