@@ -104,5 +104,5 @@ echo -e $COL_GREEN"Enabling Gunicorn ..."$COL_RESET
 sudo systemctl enable $MYPROJECT
 
 echo
-echo -e $COL_BLUE'Now run "systemctl status nix"'$COL_RESET
-
+echo -e $COL_BLUE'-> Now run "systemctl status nix"'$COL_RESET
+echo
