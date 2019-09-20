@@ -98,6 +98,8 @@ WantedBy=multi-user.target
 
 echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
 sudo systemctl start $MYPROJECT
+
+echo -e $COL_GREEN"Enabling Gunicorn ..."$COL_RESET
 sudo systemctl enable $MYPROJECT
 
 
