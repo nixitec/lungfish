@@ -2,8 +2,9 @@
 COL_GREEN="\x1b[32;01m"
 COL_RESET="\x1b[39;49;00m"
 
-MYPROJECT="nixography"
+MYPROJECT="nix"
 MYPROJECT_ENV="nix_env"
+USERNAME="ubuntu"
 
 echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 
@@ -62,7 +63,7 @@ echo -e $COL_GREEN"Opening Port 5000 ..."$COL_RESET
 sudo ufw allow 5000
 
 echo -e $COL_GREEN"Installing Creating myproject.py ..."$COL_RESET  #Note: Use "..." and escape \ the " and not the '
-> myproject.py
+> $MYPROJECT.py
 echo -e "
 from flask import Flask
 app = Flask(__name__)
@@ -73,7 +74,7 @@ def hello():
 
 if __name__ == \"__main__\":
     app.run(host='0.0.0.0')
-" > myproject.py
+" > $MYPROJECT.py
 
 echo -e $COL_GREEN"Creating wsgi.py ..."$COL_RESET
 > wsgi.py
@@ -86,3 +87,31 @@ if __name__ == \"__main__\":
 
 echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
 gunicorn --bind 0.0.0.0:5000 wsgi:app
+
+echo -e $COL_GREEN"Deactivating Virtual Environment"$COL_RESET
+deactivate
+
+echo -e $COL_GREEN"Creating Unit file"$COL_RESET
+> /etc/systemd/system/$MYPROJECTservice
+echo -e "
+[Unit]
+Description=Gunicorn instance to serve $MYPROJECT
+After=network.target
+
+[Service]
+User=$USERNAME
+Group=www-data
+WorkingDirectory=/home/$USERNAME/$MYPROJECT
+Environment="PATH=/home/$USERNAME/$MYPROJECT/$MYPROJECT_ENV/bin"
+ExecStart=/home/$USERNAME/$MYPROJECT/$MYPROJECT_ENV/bin/gunicorn --workers 3 --bind unix:myproject.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
+
+" > /etc/systemd/system/$MYPROJECT.service
+
+echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
+sudo systemctl start $MYPROJECT
+sudo systemctl enable $MYPROJECT
+
+
