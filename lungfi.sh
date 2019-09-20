@@ -1,5 +1,6 @@
 #!/bin/bash
 COL_GREEN="\x1b[32;01m"
+COL_BLUE="\x1b[34;01m"
 COL_RESET="\x1b[39;49;00m"
 
 MYPROJECT="nix"
@@ -102,4 +103,5 @@ sudo systemctl start $MYPROJECT
 echo -e $COL_GREEN"Enabling Gunicorn ..."$COL_RESET
 sudo systemctl enable $MYPROJECT
 
+echo -e $COL_BLUE"Now run systemctl status nix"$COL_RESET
 
