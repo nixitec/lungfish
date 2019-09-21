@@ -163,7 +163,7 @@ sudo certbot -d $DOMAIN -d $WILDCARD --manual --preferred-challenges dns certonl
 
 echo
 echo -e $COL_BLUE"NGINX Tidying Up ... "$COL_RESET
-cp /lungfish reset.sh .
+cp ./lungfish reset.sh .
 chmod +x reset.sh
 rm -rf lungfish
 
