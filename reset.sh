@@ -7,4 +7,4 @@ chmod +x lungfi.sh
 cp ./reset.sh ..
 cd ..
 chmod +x reset.sh
-sudo bash +x ./lungfish/lungfi.sh
+bash +x ./lungfish/lungfi.sh
