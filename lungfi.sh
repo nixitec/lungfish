@@ -87,7 +87,7 @@ echo -e $COL_GREEN"Deactivating Virtual Environment"$COL_RESET
 deactivate
 
 echo -e $COL_GREEN"Creating Unit file"$COL_RESET
-sudo > /etc/systemd/system/$MYPROJECT.service
+sudo > $MYPROJECT.service.TEMP
 sudo echo -e "
 [Unit]
 Description=Gunicorn instance to serve $MYPROJECT
@@ -103,7 +103,10 @@ ExecStart=/home/$USERNAME/$MYPROJECT/$MYPROJECT_ENV/bin/gunicorn --workers 3 --b
 [Install]
 WantedBy=multi-user.target
 
-" > /etc/systemd/system/$MYPROJECT.service
+" > $MYPROJECT.service.TEMP
+
+sudo cp $MYPROJECT.service.TEMP /etc/systemd/system/$MYPROJECT.service
+rm $MYPROJECT.service.TEMP
 
 echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
 sudo systemctl start $MYPROJECT
