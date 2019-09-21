@@ -78,7 +78,7 @@ if __name__ == \"__main__\":
     app.run()
 " > wsgi.py
 
-exit 1
+# exit 1
 
 # echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
 # gunicorn --bind 0.0.0.0:5000 wsgi:app
