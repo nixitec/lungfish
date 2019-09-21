@@ -116,6 +116,7 @@ sudo systemctl enable $MYPROJECT
 
 echo -e $COL_GREEN"Creating NGINX site file"$COL_RESET
 sudo > $MYPROJECT.NGNX.TEMP
+sudo echo -e "
 server {
     listen 80;
     server_name your_domain www.your_domain;
