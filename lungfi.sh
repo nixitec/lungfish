@@ -136,3 +136,9 @@ sudo ln -s /etc/nginx/sites-available/$MYPROJECT /etc/nginx/sites-enabled
 sudo nginx -t
 
 sudo systemctl restart nginx
+
+echo
+echo -e $COL_BLUE"NGINX Server should be started and ready to serve"$COL_RESET
+echo
+echo -e $COL_BLUE"NGINX Tidying Up ... "$COL_RESET
+rm -rf lungfish
