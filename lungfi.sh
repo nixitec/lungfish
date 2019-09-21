@@ -141,6 +141,7 @@ sudo systemctl restart nginx
 echo
 echo -e $COL_BLUE"NGINX Server should be started and ready to serve !"$COL_RESET
 echo
+
 echo -e $COL_GREEN"NGINX Securing $MYPROJECT ..."$COL_RESET
 echo
 sudo add-apt-repository ppa:certbot/certbot
@@ -153,8 +154,8 @@ echo
 echo -e $COL_BLUE"NGINX Tidying Up ... "$COL_RESET
 rm -rf lungfish
 
+echo
 echo -e $COL_BLUE"NGINX If you encounter any errors, trying checking the following: "$COL_RESET
-
 echo sudo less /var/log/nginx/error.log: checks the Nginx error logs.
 echo sudo less /var/log/nginx/access.log: checks the Nginx access logs.
 echo sudo journalctl -u nginx: checks the Nginx process logs.
