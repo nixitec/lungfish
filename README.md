@@ -16,7 +16,7 @@ bash -x ./lungfish/lungfi.sh
 4. Link static ip address
 5. Update https txt certificates per
 ```
-https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
 ```
 4. Remove lungfish
 ```
