@@ -87,8 +87,8 @@ echo -e $COL_GREEN"Deactivating Virtual Environment"$COL_RESET
 deactivate
 
 echo -e $COL_GREEN"Creating Unit file"$COL_RESET
-> /etc/systemd/system/$MYPROJECT.service
-echo -e "
+sudo > /etc/systemd/system/$MYPROJECT.service
+sudo echo -e "
 [Unit]
 Description=Gunicorn instance to serve $MYPROJECT
 After=network.target
