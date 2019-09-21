@@ -119,11 +119,11 @@ sudo > $MYPROJECT.NGNX.TEMP
 sudo echo -e "
 server {
     listen 80;
-    server_name your_domain www.your_domain;
+    server_name nixography.com www.nixography.com;
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/home/sammy/myproject/myproject.sock;
+        proxy_pass http://unix:/home/ubuntu/nix/nix.sock;
     }
 }
 " > $MYPROJECT.NGNX.TEMP
