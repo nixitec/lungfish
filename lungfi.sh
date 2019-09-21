@@ -79,8 +79,6 @@ if __name__ == \"__main__\":
     app.run()
 " > wsgi.py
 
-# exit 1
-
 # echo -e $COL_GREEN"Starting Gunicorn ..."$COL_RESET
 # gunicorn --bind 0.0.0.0:5000 wsgi:app
 
@@ -141,6 +139,8 @@ sudo systemctl restart nginx
 echo
 echo -e $COL_BLUE"NGINX Server should be started and ready to serve !"$COL_RESET
 echo
+
+# exit 1
 
 echo -e $COL_GREEN"NGINX Securing $MYPROJECT ..."$COL_RESET
 echo
