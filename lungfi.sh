@@ -5,6 +5,7 @@ COL_RESET="\x1b[39;49;00m"
 
 MYPROJECT="nix"
 MYPROJECT_ENV="nix_env"
+MYDOMAIN="nixography.com"
 USERNAME="ubuntu"
 
 echo -e $COL_GREEN"Running Upgrade ..."$COL_RESET
@@ -119,7 +120,7 @@ sudo > $MYPROJECT.NGNX.TEMP
 sudo echo -e "
 server {
     listen 80;
-    server_name nixography.com www.nixography.com;
+    server_name $MYDOMAIN $MYDOMAIN.com;
 
     location / {
         include proxy_params;
@@ -138,7 +139,23 @@ sudo nginx -t
 sudo systemctl restart nginx
 
 echo
-echo -e $COL_BLUE"NGINX Server should be started and ready to serve"$COL_RESET
+echo -e $COL_BLUE"NGINX Server should be started and ready to serve !"$COL_RESET
+echo
+echo -e $COL_GREEN"NGINX Securing $MYPROJECT ..."$COL_RESET
+echo
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt install python-certbot-nginx
+sudo certbot --nginx -d $MYDOMAIN -d www.$MYDOMAIN
+sudo ufw delete allow 'Nginx HTTP'
+
+
 echo
 echo -e $COL_BLUE"NGINX Tidying Up ... "$COL_RESET
 rm -rf lungfish
+
+echo -e $COL_BLUE"NGINX If you encounter any errors, trying checking the following: "$COL_RESET
+
+echo sudo less /var/log/nginx/error.log: checks the Nginx error logs.
+echo sudo less /var/log/nginx/access.log: checks the Nginx access logs.
+echo sudo journalctl -u nginx: checks the Nginx process logs.
+echo sudo journalctl -u myproject: checks your Flask app’s Gunicorn logs.
