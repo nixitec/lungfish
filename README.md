@@ -32,3 +32,9 @@ sudo rm -rfv lungfish
 ### This script was created based on these excellent articles and links:
 - https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
 - https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
+
+### The following commands may be useful:
+- sudo less /var/log/nginx/error.log: checks the Nginx error logs.
+- sudo less /var/log/nginx/access.log: checks the Nginx access logs.
+- sudo journalctl -u nginx: checks the Nginx process logs.
+- sudo journalctl -u myproject: checks your Flask app’s Gunicorn logs.
