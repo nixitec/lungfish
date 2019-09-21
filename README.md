@@ -24,3 +24,6 @@ sudo rm -rfv lungfish
 ### lungfi.sh will:
 1. Create a new user
 1. Install Cloud9
+
+###Excellent articles and links:
+https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
