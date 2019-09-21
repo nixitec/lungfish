@@ -3,6 +3,7 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
 
 ### Preperation:
 1. Install Lightsail Instance
+1a. Don't forget to attach the static ip
 
 2. Clone this repository
 ```
