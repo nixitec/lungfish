@@ -114,6 +114,24 @@ sudo systemctl start $MYPROJECT
 echo -e $COL_GREEN"Enabling Gunicorn ..."$COL_RESET
 sudo systemctl enable $MYPROJECT
 
-echo
-echo -e $COL_BLUE'-> Now run "systemctl status nix"'$COL_RESET
-echo
+echo -e $COL_GREEN"Creating NGINX site file"$COL_RESET
+sudo > $MYPROJECT.NGNX.TEMP
+server {
+    listen 80;
+    server_name your_domain www.your_domain;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/sammy/myproject/myproject.sock;
+    }
+}
+" > $MYPROJECT.NGNX.TEMP
+
+sudo cp $MYPROJECT.NGNX.TEMP /etc/nginx/sites-available/$MYPROJECT
+rm $MYPROJECT.NGNX.TEMP
+
+sudo ln -s /etc/nginx/sites-available/$MYPROJECT /etc/nginx/sites-enabled
+
+sudo nginx -t
+
+sudo systemctl restart nginx
