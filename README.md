@@ -25,5 +25,6 @@ sudo rm -rfv lungfish
 1. Create a new user
 1. Install Cloud9
 
-###Excellent articles and links:
+###This script was created based on these excellent articles and links:
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
 https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
