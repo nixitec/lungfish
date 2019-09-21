@@ -7,6 +7,12 @@ MYPROJECT="nix"
 MYPROJECT_ENV="nix_env"
 USERNAME="ubuntu"
 
+echo -e $COL_GREEN"Running Upgrade ..."$COL_RESET
+
+sudo apt-get update
+sudo apt-get upgrade
+
+
 echo -e $COL_GREEN"Installing NGINX, GreenUnicorn and Flask ..."$COL_RESET
 
 # Create a new user
