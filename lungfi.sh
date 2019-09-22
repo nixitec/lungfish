@@ -118,7 +118,7 @@ sudo > $MYPROJECT.NGNX.TEMP
 sudo echo -e "
 server {
     listen 80;
-    server_name $MYDOMAIN $MYDOMAIN.com;
+    server_name $MYDOMAIN www.$MYDOMAIN;
 
     location / {
         include proxy_params;
