@@ -38,3 +38,7 @@ sudo rm -rfv lungfish
 - sudo less /var/log/nginx/access.log: checks the Nginx access logs.
 - sudo journalctl -u nginx: checks the Nginx process logs.
 - sudo journalctl -u myproject: checks your Flask app’s Gunicorn logs.
+
+
+### The following files may be useful:
+- cat /var/log/nginx/access.log
