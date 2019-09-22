@@ -17,7 +17,6 @@ Also:
 - Link static ip address
 - Open HTTPS port
 ```
-4. Link static ip address
 5. Update https 'txt' certificates per
 ```
 https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
