@@ -12,6 +12,10 @@ git clone https://github.com/nixitec/lungfish.git
 ```
 chmod +x ./lungfish/lungfi.sh
 bash -x ./lungfish/lungfi.sh
+
+Also:
+- Link static ip address
+- Open HTTPS port
 ```
 4. Link static ip address
 5. Update https 'txt' certificates per
