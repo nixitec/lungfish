@@ -37,6 +37,8 @@ sudo rm -rfv lungfish
 - https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
 
 ### The following commands may be useful:
+- tail -f /var/log/nginx/access.log | less -S: lists the last 10 records and updates new records
+- 
 - sudo less /var/log/nginx/error.log: checks the Nginx error logs.
 - sudo less /var/log/nginx/access.log: checks the Nginx access logs.
 - sudo journalctl -u nginx: checks the Nginx process logs.
