@@ -4,12 +4,12 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
 ### Preperation:
 1. Install Lightsail Instance
 2. In Lightsail
-  - Attach Static IP
-  - Create DNS Zone
+    - Attach Static IP
+    - Create DNS Zone
     - Take note of Name Servers (4)
 3. In Route 53 (or other Register)
 - Register Domain
-- Change Name Servers to those from Lightsail
+- Change Name Servers to those noted from Lightsail
 
 1. Clone this repository
 ```
