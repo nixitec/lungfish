@@ -11,7 +11,7 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
     - Register Domain
     - Enter Static IP from Lightsail
     - Change Name Servers to those noted from Lightsail
-4. Wait !!! (it takes time - up to 48 hours)
+4. Wait !!! (it takes time - anywhere from 5 mins to 48 hours)
     - You can do the installation while you are waiting
 
 ### Installation
