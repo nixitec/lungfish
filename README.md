@@ -3,12 +3,19 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
 
 ### Preperation:
 1. Install Lightsail Instance
+2. In Lightsail
+  - Attach Static IP
+  - Create DNS Zone
+    - Take note of Name Servers (4)
+3. In Route 53 (or other Register)
+- Register Domain
+- Change Name Servers to those from Lightsail
 
-2. Clone this repository
+1. Clone this repository
 ```
 git clone https://github.com/nixitec/lungfish.git
 ```
-3. Run ./lungfi.sh
+1. Run ./lungfi.sh
 ```
 chmod +x ./lungfish/lungfi.sh
 bash -x ./lungfish/lungfi.sh
@@ -17,11 +24,11 @@ Also:
 - Link static ip address
 - Open HTTPS port
 ```
-5. Update https 'txt' certificates per
+1. Update https 'txt' certificates per
 ```
 https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-lets-encrypt-certificates-with-nginx
 ```
-4. Remove lungfish
+1. Remove lungfish
 ```
 sudo rm -rfv lungfish
 ```
