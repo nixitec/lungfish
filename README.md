@@ -7,7 +7,7 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
     - Attach Static IP
     - Create DNS Zone
         - Create A records for @ and www
-    - Take note of Name Servers (4)
+        - Take note of Name Servers (4)
 3. In Route 53 (or other Register)
     - Register Domain
     - Enter Static IP from Lightsail
