@@ -8,9 +8,11 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
     - Create DNS Zone
     - Take note of Name Servers (4)
 3. In Route 53 (or other Register)
-- Register Domain
-- Change Name Servers to those noted from Lightsail
-
+    - Register Domain
+    - Enter Static IP from Lightsail
+    - Change Name Servers to those noted from Lightsail
+4. Wait !!! (it takes time - up to 48 hours)
+    - You can do the stuff below while you are waiting
 1. Clone this repository
 ```
 git clone https://github.com/nixitec/lungfish.git
