@@ -79,11 +79,11 @@ if __name__ == \"__main__\":
     app.run()
 " > wsgi.py
 
-echo -e $COL_GREEN"Starting Gunicorn on port 5000 ..."$COL_RESET
-gunicorn --bind 0.0.0.0:5000 wsgi:app
-echo -e $COL_GREEN"Try www.$MYDOMAIN:5000"$COL_RESET
+# echo -e $COL_GREEN"Starting Gunicorn on port 5000 ..."$COL_RESET
+# gunicorn --bind 0.0.0.0:5000 wsgi:app
+# echo -e $COL_GREEN"Try www.$MYDOMAIN:5000"$COL_RESET
 
-exit 1
+# exit 1
 
 echo -e $COL_GREEN"Deactivating Virtual Environment"$COL_RESET
 deactivate
