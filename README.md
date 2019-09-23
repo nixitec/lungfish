@@ -12,7 +12,9 @@ Linux Ubuntu Nginx Gunicorn Flask Instance SHell
     - Enter Static IP from Lightsail
     - Change Name Servers to those noted from Lightsail
 4. Wait !!! (it takes time - up to 48 hours)
-    - You can do the stuff below while you are waiting
+    - You can do the installation while you are waiting
+
+### Installation
 1. Clone this repository
 ```
 git clone https://github.com/nixitec/lungfish.git
