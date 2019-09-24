@@ -140,30 +140,20 @@ sudo nginx -t
 
 sudo systemctl restart nginx
 
+sudo ufw delete allow 'Nginx Full'
+
 echo
 echo -e $COL_BLUE"NGINX Server should be started and ready to serve !"$COL_RESET
 echo
 
-exit 1
+# exit 1
 
 echo -e $COL_GREEN"NGINX Securing $MYPROJECT ..."$COL_RESET
 echo
-# sudo add-apt-repository ppa:certbot/certbot
-# sudo apt install python-certbot-nginx
-# sudo certbot --nginx -d $MYDOMAIN -d www.$MYDOMAIN
-# sudo ufw delete allow 'Nginx HTTP'
-
-sudo apt-get install software-properties-common
-sudo apt-add-repository ppa:certbot/certbot -y
-sudo apt-get update -y
-sudo apt-get install certbot -y
-DOMAIN=$MYDOMAIN
-WILDCARD=*.$DOMAIN
-echo $DOMAIN && echo $WILDCARD
-
-sudo certbot -d $DOMAIN -d $WILDCARD --manual --preferred-challenges dns certonly
-
-
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt install python-certbot-nginx
+sudo certbot --nginx -d $MYDOMAIN -d www.$MYDOMAIN
+sudo ufw delete allow 'Nginx HTTP'
 
 echo
 echo -e $COL_BLUE"NGINX Tidying Up ... "$COL_RESET
