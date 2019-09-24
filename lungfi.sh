@@ -31,6 +31,7 @@ sudo ufw enable
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'OpenSSH'
+sudo ufw allow https
 # sudo ufw status
 # systemctl status nginx
 
