@@ -155,6 +155,17 @@ sudo apt install python-certbot-nginx
 sudo certbot --nginx -d $MYDOMAIN -d www.$MYDOMAIN
 sudo ufw delete allow 'Nginx HTTP'
 
+echo -e $COL_GREEN"NGINX Installing Cloud9 dependencies ..."$COL_RESET
+sudo apt install python-minimal
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+. ~/.bashrc
+nvm install node
+which node
+
+
+
+
+
 echo
 echo -e $COL_BLUE"NGINX Tidying Up ... "$COL_RESET
 cp ./lungfish reset.sh .
