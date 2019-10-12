@@ -68,6 +68,6 @@ sudo rm -rfv lungfish
 - /etc/letsencrypt/ssl-dhparams.pem
 
 
-[New Page](http://nixography.com)
+[New Page]()
 
 
