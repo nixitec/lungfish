@@ -61,7 +61,7 @@ sudo rm -rfv lungfish
 
 ### The following files may be useful:
 - /var/log/nginx/access.log
-- /etc/nginx/sutes-enabled/nix
+- /etc/nginx/sites-enabled/nix
 - /etc/letsencrypt/live/nixography.com/fullchail.pem
 - /etc/letsencrypt/live/nixography.com/privkey.pem
 - /etc/letsencrypy/options-ssl-nginx.conf
